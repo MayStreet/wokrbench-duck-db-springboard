@@ -1,0 +1,31 @@
+# MayStreet DuckDB & Data Lake Springboard
+
+## Welcome
+
+Welcome to the DuckDB & Data Lake Springboard
+
+This springboard shows examples of connecting MayStreet's big data store
+with your own data using the excellent [DuckDB](https://duckdb.org) open-source database engine.
+
+Feel free to copy the code from any of these examples into your own notebook, or
+to modify the existing notebooks. This is an isolated copy of this springboard
+which will remain in your own secured Analytics Workbench file system so you can
+tinker, continue, or start over whenever and however you like!
+
+If you'd like to make a copy of any notebook with a different name simply select
+`File` -> `Save As...` and choose a new name.
+
+
+## Notebooks
+
+### _[duckdb_example.ipynb](duckdb_example.ipynb)_
+
+This Jupyter notebook provides a set of cells which perform the following (sequential) actions:
+1. Opens a DB instance backed by a file.
+2. Configures DuckDB with credentials provided by Workbench so that DuckDB can directly read Parquet files from S3.
+3. Creates a table of data by pulling a number of Parquet files from S3 using the MayStreet' Data Library's 
+`parquet_query` function and ingesting them directly into DuckDB.
+4. Creates a table from a local CSV file.
+5. Performs a very simple SQL `JOIN` statement between the table of data from the data lake and user data.
+6. Exports this data as CSV.
+7. Closes the database connection.

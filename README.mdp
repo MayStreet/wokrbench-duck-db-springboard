@@ -23,9 +23,16 @@ If you'd like to make a copy of any notebook with a different name simply select
 This Jupyter notebook provides a set of cells which perform the following (sequential) actions:
 1. Opens a DB instance backed by a file.
 2. Configures DuckDB with credentials provided by Workbench so that DuckDB can directly read Parquet files from S3.
-3. Creates a table of data by pulling a number of Parquet files from S3 using the MayStreet' Data Library's 
+3. Creates a table of data by pulling a number of Parquet files from S3 using the MayStreet' Data Library's
 `parquet_query` function and ingesting them directly into DuckDB.
 4. Creates a table from a local CSV file.
 5. Performs a very simple SQL `JOIN` statement between the table of data from the data lake and user data.
 6. Exports this data as CSV.
 7. Closes the database connection.
+
+### _[query-with-own-data.ipynb](query-with-own-data.ipynb)_
+
+This Jupyter notebook provides a set of cells which perform the following (sequential) actions:
+1. Extract a technical indicator from our Data Lake into a Pandas dataframe.
+2. Import your own data in a queryable format.
+3. Join the two datasets together in a SQL query.
